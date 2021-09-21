@@ -225,3 +225,6 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+*.iml
+*.xml
+.idea

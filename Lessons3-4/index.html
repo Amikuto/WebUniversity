@@ -2,20 +2,21 @@
 <html lang="ru">
   <head>
     <!-- Обязательные метатеги -->
+    <title>Опрос по программированию!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-    <title>Привет мир!</title>
+    <link href="main.css" rel="stylesheet">
   </head>
+
   <body>
     <div class="main-layer, text-center">
       <h1 class="display-3">Сколько времени в день вы тратите на программирование?</h1>
 
-      <div style="margin: 10px 100px 10px 100px;">
+      <div class="m-block">
       <h2 class="display-6">Расскажите о себе</h2>
         <form>
           <div class="row mb-4">
@@ -39,102 +40,85 @@
         </form>
       </div>
 
-      <div class="">
-        <h2>Какой язык вы изучаете в данный момент?</h2>
+      <div class="m-block">
+        <h2 class="display-6">Какой язык вы изучаете в данный момент?</h2>
         <form>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-
-<!--            <input type="checkbox" class="form-check-input" id="exampleCheck2">-->
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-
-<!--            <input type="checkbox" class="form-check-input" id="exampleCheck3">-->
-            <label class="form-check-label" for="exampleCheck3">Check me out</label>
-
-<!--            <input type="checkbox" class="form-check-input" id="exampleCheck4">-->
-            <label class="form-check-label" for="exampleCheck4">Check me out</label>
+          <!-- TODO: переделать, чтобы они были друг под другом -->
+          <div class="form-check">
+            <input class="pull-center" type="checkbox" value="Java" id="JavaCheckBox">
+            <label class="form-check-label pull-center" for="JavaCheckBox">
+              Java
+            </label>
+            <input class="pull-center" type="checkbox" value="Python" id="JavPythonCheckBox">
+            <label class="form-check-label pull-bottom" for="JavPythonCheckBox">
+              Python
+            </label>
+            <input class="pull-center" type="checkbox" value="Cpp" id="CppCheckBox">
+            <label class="form-check-label pull-center" for="CppCheckBox">
+              C++
+            </label>
+            <input class="pull-center" type="checkbox" value="Csharp" id="CsharpCheckBox">
+            <label class="form-check-label pull-center" for="CsharpCheckBox">
+              C#
+            </label>
+            <input class="pull-center" type="checkbox" value="Ruby" id="RubyCheckBox">
+            <label class="form-check-label pull-center" for="RubyCheckBox">
+              Ruby
+            </label>
+            <input class="pull-center" type="checkbox" value="Js" id="JsCheckBox">
+            <label class="form-check-label pull-center" for="JsCheckBox">
+              JavaScript
+            </label>
+            <input class="pull-center" type="checkbox" value="R" id="RCheckBox">
+            <label class="form-check-label pull-center" for="RCheckBox">
+              R
+            </label>
+            <input class="pull-center" type="checkbox" value="Another" id="AnotherCheckBox">
+            <label class="form-check-label pull-center" for="AnotherCheckBox">
+              Другое
+            </label>
           </div>
         </form>
       </div>
 
 
-
-
-
-
-
-
-
-      <button type="submit" class="btn btn-primary btn-block mb-4">Отправить</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class="forms">
-
-        <div class="programming-lang">
-        <form>
-          <h2>Какой язык вы изучаете в данный момент?</h2>
-          <label>
-          <input type=checkbox name="dist" value="yes" checked> Java
-          <input type=checkbox name="dist" value="yes" checked> Python
-          <input type=checkbox name="dist" value="yes" checked> C++
-          <input type=checkbox name="dist" value="yes" checked> C#
-          <input type=checkbox name="dist" value="yes" checked> R
-          <input type=checkbox name="dist" value="yes" checked> Ruby
-          <input type=checkbox name="dist" value="yes" checked> JavaScript
-          <input type=checkbox name="dist" value="yes" checked> Другое
-          </label>
-        </form>
-        </div>
-
-        <h2>Какая парадигма программирования рулит?</h2>
+      <div class="paradigma-selecter m-block">
+        <h2 class="display-6">Какая парадигма программирования рулит?</h2>
         <form name="selecter">
           <label>
-            <select name="country">
-              <option value="Imperial">Императивное программирование
-              <option value="Declarative">Декларативное программирование
-              <option value="Structural">Структурное программирование
-              <option value="Functional">Функциональное программирование
-              <option value="Logical">Логическое программирование
-              <option value="OOP">Объектно-ориентированное программирование
+            <select class="form-select" aria-label="language-select">
+              <option selected value="Imperial">Императивное программирование</option>
+              <option value="Declarative">Декларативное программирование</option>
+              <option value="Structural">Структурное программирование</option>
+              <option value="Functional">Функциональное программирование</option>
+              <option value="Logical">Логическое программирование</option>
+              <option value="OOP">Объектно-ориентированное программирование</option>
             </select>
           </label>
         </form>
-
-        <form name="raider">
-          <h2>Вы довольны своими знаниями?</h2>
-          <label>
-          <input type="radio" name="abc" value="">Да
-          <input type="radio" name="abc" value="">Нет
-          <input type="radio" name="abc" value="" checked>Я не готов дать точный ответ
-          </label>
-        </form>
-
-        <h2>Вам понравился данный опрос? Нас интересует ваше мнение!</h2>
-          <label>
-            <textarea rows="5" cols="30" name=""></textarea>
-          </label>
-        <p><input type="submit" value="Отправить"></p>
       </div>
+
+      <div class="m-block">
+        <h2 class="display-6">Вы довольны своими знаниями в программировании?</h2>
+        <input class="form-check-input" type="radio" name="satisfied" id="SatisfiedYes">
+        <label class="form-check-label" for="SatisfiedYes">
+          Да
+        </label>
+        <input class="form-check-input" type="radio" name="satisfied" id="SatisfiedNo" checked>
+        <label class="form-check-label" for="SatisfiedNo">
+          Нет
+        </label>
+      </div>
+
+      <div class="m-block">
+<!--        <h2 class="display-6">Вам понравился данный опрос? Нас интересует ваше мнение!</h2>-->
+        <div class="form-group">
+          <label for="comment">Вам понравился данный опрос? Нас интересует ваше мнение!</label>
+          <textarea class="form-control" id="comment" rows="3"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block mb-4">Отправить</button>
     </div>
   </body>
 </html>

@@ -228,3 +228,5 @@ pip-selfcheck.json
 *.iml
 *.xml
 .idea
+./Lessons3-4/bootstrap-5.0.2/
+/Lessons3-4/bootstrap-5.0.2/

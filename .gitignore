@@ -230,3 +230,4 @@ pip-selfcheck.json
 .idea
 ./Lessons3-4/bootstrap-5.0.2/
 /Lessons3-4/bootstrap-5.0.2/
+*.bsdesign

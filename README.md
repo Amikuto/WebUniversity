@@ -13,5 +13,5 @@
     3. [Страница представления команды разработки (задача 2)](./Lessons3-4/team)
    * Сама страница [click](./Lessons3-4/team/index.html)
     4. ["Мой ГитХаб" (задача 3)](./Lessons3-4/MyGitHub)
-   * Страница регистрации [click]
+   * Страница регистрации [click](./Lessons3-4/MyGitHub/index.html)
    * Страница входа [click](./Lessons3-4/MyGitHub/sign-in-page.html)

@@ -1,9 +1,9 @@
 .bitmap {
   position: absolute;
   width: 1787.02px;
-  height: 1343px;
+  height: 1009px;
   left: -2.99px;
-  top: -383px;
+  /*top: -383px;*/
   background: url("../../assets/img/0c836a8fd2a377273d2d552baef20cd5.png") no-repeat;
   background-size: contain;
 }
@@ -338,5 +338,23 @@ body {
   left: 0px;
   top: 24px;
   background: #4CAF50;
+}
+
+.mask {
+  position: absolute;
+  width: 1800px;
+  height: 904px;
+  left: 0px;
+  top: 0px;
+  background: #000000;
+}
+
+.mask-4 {
+  position: absolute;
+  width: 1800px;
+  height: 904px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(177.86deg, #000000 -41.81%, rgba(0, 0, 0, 0.0001) 82.48%);
 }
 

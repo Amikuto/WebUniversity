@@ -1,0 +1,67 @@
+.bitmap {
+  position: absolute;
+  width: 1787.02px;
+  height: 1343px;
+  left: -2.99px;
+  top: -383px;
+  background: url("../../assets/img/0c836a8fd2a377273d2d552baef20cd5.png") no-repeat;
+  background-size: contain;
+}
+
+.image {
+  position: absolute;
+  width: 1800px;
+  height: 904px;
+  left: 0px;
+  top: 0px;
+}
+
+.div-hero {
+  position: absolute;
+  width: 1800px;
+  height: 904px;
+  left: calc(50% - 1800px/2 - 3px);
+  top: 48px;
+}
+
+.gradient {
+  position: absolute;
+  width: 1800px;
+  height: 904px;
+  left: 0px;
+  top: 0px;
+}
+
+.div-index-freebie-agency {
+  position: relative;
+  width: 1896px;
+  height: 6553px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  top: -3074px;
+  left: -372px;
+}
+
+.where-great-ideas {
+  position: absolute;
+  width: 1171.05px;
+  /*height: 98px;*/
+  left: 310.48px;
+  top: 383px;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 107px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: 4.608px;
+  color: #FFFFFF;
+  border: 1px solid #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+

@@ -15,3 +15,13 @@
     4. ["Мой ГитХаб" (задача 3)](./Lessons3-4/MyGitHub)
    * Страница регистрации [click](./Lessons3-4/MyGitHub/index.html)
    * Страница входа [click](./Lessons3-4/MyGitHub/sign-in-page.html)
+
+3. [Семинары 5-6](./Lessons5-6)
+    1. [Страница фигмы](./Lessons5-6/Work)
+   * Сама страница [click](./Lessons5-6/Work/index.html)
+
+4. [Семинары 7-8](./Lessons7-8)
+    1. [Повтор методички (задание 1)](./Lessons7-8/Task1)
+   * Сама страница [click](./Lessons7-8/Task1/index.html)
+   2. [Переделка фигмы (задание 2)](./Lessons7-8/Task2)
+   * Сама страница [click](./Lessons7-8/Task2/index.html)

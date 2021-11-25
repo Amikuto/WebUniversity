@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Шахматная доска</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+    let out = '';
+    for (let i = 1; i<=8; i++) {
+          for (let j=1; j<=8; j++) {
+              if (i%2 === j%2) {
+                  out += '#'
+              } else {
+                  out += '\xa0'
+              }
+          }
+          out += '<br>'
+      }
+      document.write(out);
+      document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>

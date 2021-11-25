@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6)	Сумма диапазона</title>
+  <script>
+  function range(start, end, step=1) {
+      let out = [];
+      if (step < 0) {
+        step = -step;
+        for (let i=start; i>=end; i -= step) {
+          out += i;
+        }
+        return out;
+      } else if (step > 0) {
+        for (let i=start; i<=end; i += step) {
+          out += i;
+        }
+        return out;
+      }
+  }
+  console.log(range(1, 5))
+
+  function sum(array) {
+      let out = 0;
+      for (let i=0; i<=array.length-1; i++) {
+          out += array[i];
+      }
+      return out;
+  }
+  console.log(sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+  console.log(range(1, 10, 2))
+
+  console.log(range(5, 2, -1))
+  </script>
+</head>
+<body>
+
+</body>
+</html>

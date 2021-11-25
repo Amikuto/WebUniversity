@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>13) Every и some</title>
+  <script>
+      function every(array, action) {
+          for (let index in array) {
+              //     console.log(val(array[index]))
+              if (!action(array[index]))
+                  return false;
+          }
+          return true;
+      }
+
+      function some(array, action) {
+          for (let index in array) {
+              if (action(array[index]))
+                  return true;
+          }
+          return false;
+      }
+
+      console.log(every([NaN, NaN, NaN], isNaN))
+      console.log(every([NaN, NaN, 1], isNaN))
+      console.log(some([NaN, NaN, NaN], isNaN))
+      console.log(some([3, 2, 1], isNaN))
+  </script>
+</head>
+<body>
+
+</body>
+</html>

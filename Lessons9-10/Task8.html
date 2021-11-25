@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>8) Список</title>
+  <script>
+      function arrayToList(array) {
+          let val = array.shift();
+          let ob;
+          if (array.length !== 0) {
+              ob = {
+                  value: val,
+                  rest: arrayToList(array)
+              }
+          } else {
+              ob = {
+                  value: val,
+                  rest: null
+              }
+          }
+          return ob;
+      }
+
+      console.log(arrayToList([1, 2, 3]));
+
+      function listToArray(list) {
+          let out = [];
+          if (list.rest === null) {
+              return [list.value]
+          }
+          out.push(list.value)
+          out.push(...listToArray(list.rest))
+          return out;
+      }
+
+      console.log(listToArray(arrayToList([1, 2, 3])))
+
+      function prepend(list, val) {
+          return {
+              value: val,
+              rest: list
+          };
+      }
+
+      console.log(prepend(arrayToList([1, 2, 3]), 5));
+
+      function nth(list, val) {
+          val--;
+          if (list.rest === null) {
+              return undefined
+          }
+          if (val === 0) {
+              return list.value
+          } else {
+              return nth(list.rest, val)
+          }
+      }
+
+      console.log(nth(arrayToList([1, 2, 3]), 4));
+  </script>
+</head>
+<body>
+
+</body>
+</html>

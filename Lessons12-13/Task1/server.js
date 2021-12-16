@@ -35,20 +35,20 @@ try {
 
 const axios = require('axios');
 
-async function search(str) {
-  const geocoderUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' +
-    encodeURIComponent(str) +
-    '.json?access_token=' +
-    'pk.eyJ1IjoibWF0dGZpY2tlIiwiYSI6ImNqNnM2YmFoNzAwcTMzM214NTB1NHdwbnoifQ.Or19S7KmYPHW8YjRz82v6g';
-
-  const res = await axios.get(geocoderUrl).then(res => res.data);
-  const point = res.features[0].geometry;
-
-  return 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/' +
-    'pin-l-1+333(' + point.coordinates[0] + ',' + point.coordinates[1] + ')/' +
-    point.coordinates[0] + ',' + point.coordinates[1] +
-    ',14.25,0,0/600x600/' +
-    '?access_token=pk.eyJ1IjoibWF0dGZpY2tlIiwiYSI6ImNqNnM2YmFoNzAwcTMzM214NTB1NHdwbnoifQ.Or19S7KmYPHW8YjRz82v6g';
-}
+// async function search(str) {
+//   const geocoderUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' +
+//     encodeURIComponent(str) +
+//     '.json?access_token=' +
+//     'pk.eyJ1IjoibWF0dGZpY2tlIiwiYSI6ImNqNnM2YmFoNzAwcTMzM214NTB1NHdwbnoifQ.Or19S7KmYPHW8YjRz82v6g';
+//
+//   const res = await axios.get(geocoderUrl).then(res => res.data);
+//   const point = res.features[0].geometry;
+//
+//   return 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/' +
+//     'pin-l-1+333(' + point.coordinates[0] + ',' + point.coordinates[1] + ')/' +
+//     point.coordinates[0] + ',' + point.coordinates[1] +
+//     ',14.25,0,0/600x600/' +
+//     '?access_token=pk.eyJ1IjoibWF0dGZpY2tlIiwiYSI6ImNqNnM2YmFoNzAwcTMzM214NTB1NHdwbnoifQ.Or19S7KmYPHW8YjRz82v6g';
+// }
 
 search('429 Lenox Ave, Miami Beach').then(res => console.log(res));

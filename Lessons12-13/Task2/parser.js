@@ -112,7 +112,4 @@ function main() {
     const genButton = document.getElementById("generated_button")
     genButton.addEventListener("click", printGeneratedNumbers, false);
     genButton.numbers = generatedNumbers
-    genButton.max = 500;
-    genButton.len = 100;
-
 }

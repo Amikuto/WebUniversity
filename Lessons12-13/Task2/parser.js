@@ -53,7 +53,7 @@ function clearCanvas() {
 
 function printParsedData() {
     clearCanvas();
-    parse_data().forEach(el => printCanvas(el.geo_data.coordinates))
+    parse_data().forEach(el => printCanvas([el.geo_data.coordinates[0] % 1 * 1000 % 1 * 100, el.geo_data.coordinates[1] % 1 * 1000 % 1 * 100]));
 }
 
 function printGeneratedNumbers(event) {
@@ -76,7 +76,6 @@ function taskFunc(x) {
     }
 
     const indexMinor = list1.indexOf(Math.min(...list1));
-    console.log(x[indexMinor]);
     colorDot(x[indexMinor]);
 }
 

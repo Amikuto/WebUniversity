@@ -72,23 +72,10 @@ function taskFunc(x) {
             }
             list2.push(findLenBtwDots(x[j], x[i]));
         }
-        list1.push(arrayMin(list2));
+        list1.push(Math.min(...list2));
     }
-
     const indexMinor = list1.indexOf(Math.min(...list1));
     colorDot(x[indexMinor]);
-}
-
-function arrayMin(arr) {
-    return arr.reduce(function (p, v) {
-        return (p < v ? p : v);
-    });
-}
-
-function arrayMax(arr) {
-    return arr.reduce(function (p, v) {
-        return (p > v ? p : v);
-    });
 }
 
 function findLenBtwDots(dot1, dot2) {
@@ -105,6 +92,8 @@ function colorDot(coords) {
 }
 
 function main() {
+    console.log(getStatistic(parse_data()));
+
     document.getElementById("json_button").addEventListener("click", printParsedData, false);
 
     const generatedNumbers = generateRandomNumbers(500, 100);

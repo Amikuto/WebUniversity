@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>babel</title>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+<div id="app"></div>
+<div id="container"></div>
+
+
+<script type="text/babel">
+    ReactDOM.render(
+        <h1>Hello React</h1>,
+        document.getElementById("app")
+    )
+
+    function Hello1() {
+        return <h1>Привет1</h1>;
+    }
+
+    const Hello2 = () => {
+        return (<h1>Привет2</h1>);
+    };
+
+    class Hello3 extends React.Component {
+        render() {
+            return <h1>Привет3</h1>;
+        }
+    }
+
+    ReactDOM.render(
+        <Hello1/>,
+        document.getElementById("container")
+    )
+</script>
+</body>
+</html>

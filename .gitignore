@@ -232,3 +232,4 @@ pip-selfcheck.json
 /Lessons3-4/bootstrap-5.0.2/
 *.bsdesign
 node_modules/*
+/Lessons16/node/node_modules/

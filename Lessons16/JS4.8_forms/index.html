@@ -65,9 +65,7 @@
 
 
         render() {
-            // цвет границы для поля для ввода имени
             const nameColor = this.state.nameValid === true ? "green" : "red";
-            // цвет границы для поля для ввода возраста
             const ageColor = this.state.ageValid === true ? "green" : "red";
             return (
                 <form onSubmit={this.handleSubmit}>

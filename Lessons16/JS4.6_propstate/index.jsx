@@ -7,10 +7,10 @@ class Hello extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <Hello name="Damir" age="20"/>,
-    document.getElementById("app")
-)
+// ReactDOM.render(
+//     <Hello name="Damir" age="20"/>,
+//     document.getElementById("app")
+// )
 
 
 class ClickButton extends React.Component {

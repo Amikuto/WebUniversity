@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JSX</title>
+    <meta charset="UTF-8">
+    <title>JSX</title>
 
-  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
 <div id="app"></div>
@@ -37,9 +37,12 @@
 
 
     ReactDOM.render(
-        <div className={userClassName} style={styleObj}>
-            <p>Полное имя: {user.getFullName()}</p>
-            <p>Возраст: {user.age}</p>
+        <div>
+            <div className={userClassName} style={styleObj}>
+                <p>Полное имя: {user.getFullName()}</p>
+                <p>Возраст: {user.age}</p>
+            </div>
+            <h2>5 + 2 = {5 + 2}</h2>
         </div>,
         document.getElementById("app")
     )

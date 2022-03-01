@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>babel</title>
+    <meta charset="UTF-8">
+    <title>babel</title>
 
-  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
 
@@ -36,7 +36,11 @@
     }
 
     ReactDOM.render(
-        <Hello1/>,
+        <div>
+            <Hello1/>
+            <Hello2/>
+            <Hello3/>
+        </div>,
         document.getElementById("container")
     )
 </script>

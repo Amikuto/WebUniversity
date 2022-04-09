@@ -1,26 +1,31 @@
 import React, {useState} from "react";
+import {Dropdown} from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Hooks from "./components/JS4.10_hooks/Hooks";
+import './styles/App.css'
 
 function App() {
 
-  const [count, setCount] = useState(0);
-  const [age, setAge] = useState(20);
-  const [fruit, setFruit] = useState('banana')
-  const [todos, setTodos] = useState([{text: 'Learn more about hooks!'}])
+  const [task, setTask] = useState(Hooks);
 
   return (
     <div>
-      <p>Вы нажали {count} раз</p>
-      <button onClick={() => setCount(count + 1)}>Нажми меня!</button>
-      <p>Ваш возраст: {age}</p>
-      <input type={"number"} value={age} onInput={event => setAge(event.target.value)}/>
-      <p>Fruit: {fruit}</p>
-      <input value={fruit} onInput={e => setFruit(e.target.value)}/>
-      <p>
-        Todos: {todos.at(0).text}
-      </p>
-      <input onInput={e => setTodos([{text: e.target.value}])}/>
+      {/*<button onClick={setTask(Hooks)}/>*/}
+      <Hooks/>
+
+      <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Dropdown Button
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     </div>
-  );
+  )
 }
 
 export default App;

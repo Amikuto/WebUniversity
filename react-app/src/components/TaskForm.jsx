@@ -5,7 +5,7 @@ import DateTimePicker from 'react-datetime-picker'
 import TodoSelect from "./UI/select/TodoSelect";
 
 const TaskForm = ({create, task_types}) => {
-    const [task, setTask] = useState({title: "", body: "", type: "", endDateTime: new Date()})
+    const [task, setTask] = useState({title: "", body: "", type: task_types.at(0), endDateTime: new Date()})
 
     function addNewTask(e) {
         e.preventDefault()
@@ -31,15 +31,17 @@ const TaskForm = ({create, task_types}) => {
                     type={"text"}
                     placeholder={"Описание задачи"}
                 />
-                <TodoSelect
-                    value={task.type}
-                    onChange={e => setTask({...task, type: e})}
-                    defaultValue={"Категория"}
-                    options={task_types}
-                />
-                <DateTimePicker value={task.endDateTime} onChange={e => setTask({...task, endDateTime: e})}
-                                maxDetail={"hour"} locale={"ru-RU"}/>
-                <br/>
+                <div style={{position: "relative", top: "50%"}}>
+                    <TodoSelect
+                        value={task.type}
+                        onChange={e => setTask({...task, type: e})}
+                        defaultValue={"Категория"}
+                        options={task_types}
+                    />
+                    <br/>
+                    <DateTimePicker value={task.endDateTime} onChange={e => setTask({...task, endDateTime: e})}
+                                    maxDetail={"hour"} locale={"ru-RU"} />
+                </div>
                 <MyButton onClick={addNewTask}>Создать задачу</MyButton>
             </form>
         </div>

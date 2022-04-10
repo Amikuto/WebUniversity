@@ -2,6 +2,7 @@ import React, {useMemo, useState} from 'react';
 import TaskList from "../components/TaskList";
 import TaskForm from "../components/TaskForm";
 import TodoSelect from "../components/UI/select/TodoSelect";
+import "../styles/Todo.css"
 
 const Todo = () => {
 
@@ -112,37 +113,40 @@ const Todo = () => {
     }, [selectedTaskType, sortedTasks])
 
     return (
-        <div className={"Todo"}>
-            {/*<LeftSidePanel/>*/}
+        <div id={"todo-page"}>
 
-            <div>
-                <TaskForm create={createTask} task_types={task_types}/>
-                <hr style={{margin: "15px 0"}}/>
-                <div>
-                    <TodoSelect
-                        value={selectedTaskType}
-                        onChange={e => setSelectedTaskType(e)}
-                        defaultValue={"Категории"}
-                        options={task_types}
-                    />
-                    <TodoSelect
-                        value={selectedSort}
-                        onChange={sortTasksByValue}
-                        defaultValue={"Сортировка"}
-                        options={[
-                            {value: "time", name: "По времени"},
-                            {value: "title", name: "По названию"},
-                        ]}
-                    />
+            <div className={"Todo"}>
+                {/*<LeftSidePanel/>*/}
+
+                <div className={"todo-page"}>
+                    <TaskForm create={createTask} task_types={task_types}/>
+                    <hr style={{margin: "15px 0"}}/>
+                    <div>
+                        <TodoSelect
+                            value={selectedTaskType}
+                            onChange={e => setSelectedTaskType(e)}
+                            defaultValue={"Категории"}
+                            options={task_types}
+                        />
+                        <TodoSelect
+                            value={selectedSort}
+                            onChange={sortTasksByValue}
+                            defaultValue={"Сортировка"}
+                            options={[
+                                {value: "time", name: "По времени"},
+                                {value: "title", name: "По названию"},
+                            ]}
+                        />
+                    </div>
+                    {sortedAndSearchedTasks.length !== 0
+                        ?
+                        <TaskList remove={removeTask} tasks={sortedAndSearchedTasks} title={tasks.name}/>
+                        :
+                        <h1 style={{textAlign: "center"}}>
+                            Никаких задач пока нет!
+                        </h1>
+                    }
                 </div>
-                {sortedTasks.length !== 0
-                    ?
-                    <TaskList remove={removeTask} tasks={sortedAndSearchedTasks} title={tasks.name}/>
-                    :
-                    <h1 style={{textAlign: "center"}}>
-                        Никаких задач пока нет, быстрее добавляй, пока не забыл!
-                    </h1>
-                }
             </div>
         </div>
     );

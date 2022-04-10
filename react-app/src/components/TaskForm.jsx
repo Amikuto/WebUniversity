@@ -5,16 +5,15 @@ import DateTimePicker from 'react-datetime-picker'
 import TodoSelect from "./UI/select/TodoSelect";
 
 const TaskForm = ({create, task_types}) => {
-    const [task, setTask] = useState({title: "", body: "", type: "", endDateTime: ""})
-    const [value, onChange] = useState(new Date());
+    const [task, setTask] = useState({title: "", body: "", type: "", endDateTime: new Date()})
 
     function addNewTask(e) {
         e.preventDefault()
         const newTask = {
-            ...task, id:Date.now()
+            ...task, id: Date.now()
         }
         create(newTask)
-        setTask({title: "", body: "", type: "", endDateTime: ""})
+        setTask({title: "", body: "", type: task.type, endDateTime: new Date()})
     }
 
     return (
@@ -34,11 +33,12 @@ const TaskForm = ({create, task_types}) => {
                 />
                 <TodoSelect
                     value={task.type}
-                    onChange={e => setTask({...task, type: e.target.value})}
-                    defaultValue={"Категории"}
+                    onChange={e => setTask({...task, type: e})}
+                    defaultValue={"Категория"}
                     options={task_types}
                 />
-                <DateTimePicker value={value}/>
+                <DateTimePicker value={task.endDateTime} onChange={e => setTask({...task, endDateTime: e})}
+                                maxDetail={"hour"} locale={"ru-RU"}/>
                 <br/>
                 <MyButton onClick={addNewTask}>Создать задачу</MyButton>
             </form>

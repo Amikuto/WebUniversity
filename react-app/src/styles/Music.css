@@ -1,0 +1,65 @@
+.music-h1 {
+    font-size: 40px;
+    color: #fff;
+}
+
+.music-preview-image {
+    background-size: cover;
+    background-position: 50% 25%;
+    position: relative;
+    padding: 30% 40px 40px;
+}
+
+.music-preview-image-text-meta {
+    color: #fff;
+}
+
+.music-content-section-preview-content {
+}
+
+.music-content {
+}
+
+.music-content-text {
+
+}
+
+.text {
+    padding: 40px 40px 40px 40px;
+}
+
+p {
+    margin-bottom: 0;
+    padding: 20px;
+    color: #2f4232;
+    font-size: 20px;
+    /*font-family: sans-serif;*/
+    /*font-family: roboto;*/
+    /*text-align: left;*/
+    /*text-align: center;*/
+    /*text-decoration: line-through;*/
+    /*font-kerning: auto;*/
+    /*font-kerning: normal;*/
+    /*font-kerning: none;*/
+    /*font-kerning: inherit;*/
+    /*font-kerning: initial;*/
+    /*font-variant-ligatures: normal;*/
+    /*font-variant-ligatures: none;*/
+    /*font-variant-ligatures: common-ligatures;*/
+    /*font-variant-ligatures: no-common-ligatures;*/
+    /*font-variant-ligatures: discretionary-ligatures;*/
+    /*font-variant-ligatures: no-discretionary-ligatures;*/
+    /*font-variant-ligatures: historical-ligatures;*/
+    /*font-variant-ligatures: no-historical-ligatures;*/
+    /*font-variant-ligatures: contextual;*/
+    /*font-variant-ligatures: no-contextual;*/
+    /*font-variant-ligatures: inherit;*/
+    /*font-variant-ligatures: initial;*/
+    /*font-variant: small-caps;*/
+}
+
+.music {
+    background: #d3c0d0;
+    height: 100%;
+    width: 100%;
+}

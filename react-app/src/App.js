@@ -1,31 +1,18 @@
-import React, {useState} from "react";
-import {Dropdown} from "react-bootstrap";
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Hooks from "./components/JS4.10_hooks/Hooks";
 import './styles/App.css'
+import {BrowserRouter,} from "react-router-dom";
+import MyNavbar from "./components/UI/Navabar/MyNavbar";
+import AppRouter from "./components/AppRouter";
 
 function App() {
 
-  const [task, setTask] = useState(Hooks);
-
-  return (
-    <div>
-      {/*<button onClick={setTask(Hooks)}/>*/}
-      <Hooks/>
-
-      <Dropdown>
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
-          Dropdown Button
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu>
-          <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-    </div>
-  )
+    return (
+        <BrowserRouter>
+            <MyNavbar/>
+            <AppRouter/>
+        </BrowserRouter>
+    )
 }
 
 export default App;

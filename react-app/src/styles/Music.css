@@ -28,24 +28,24 @@
     padding: 40px 40px 40px 40px;
 }
 
-p {
+#music-page p {
     margin-bottom: 0;
     padding: 20px;
     color: #2f4232;
-    font-size: 20px;
+    font-size: 23px;
     /*font-family: sans-serif;*/
-    /*font-family: roboto;*/
-    /*text-align: left;*/
+    font-family: roboto, serif;
+    text-align: left;
     /*text-align: center;*/
     /*text-decoration: line-through;*/
-    /*font-kerning: auto;*/
+    font-kerning: auto;
     /*font-kerning: normal;*/
     /*font-kerning: none;*/
     /*font-kerning: inherit;*/
     /*font-kerning: initial;*/
     /*font-variant-ligatures: normal;*/
     /*font-variant-ligatures: none;*/
-    /*font-variant-ligatures: common-ligatures;*/
+    font-variant-ligatures: common-ligatures;
     /*font-variant-ligatures: no-common-ligatures;*/
     /*font-variant-ligatures: discretionary-ligatures;*/
     /*font-variant-ligatures: no-discretionary-ligatures;*/
@@ -55,7 +55,7 @@ p {
     /*font-variant-ligatures: no-contextual;*/
     /*font-variant-ligatures: inherit;*/
     /*font-variant-ligatures: initial;*/
-    /*font-variant: small-caps;*/
+    font-variant: small-caps;
 }
 
 .music {

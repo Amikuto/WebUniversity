@@ -4,7 +4,7 @@ import '../styles/Music.css'
 
 const Music = () => {
     return (
-        <div className={"music"}>
+        <div id={"music-page"} className={"music"}>
             <div className={"music-content"}>
                 <section className={"music-content-section-preview"}>
                     <div className={"music-content-section-preview-content"}>

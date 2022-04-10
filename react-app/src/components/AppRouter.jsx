@@ -6,6 +6,7 @@ import Hooks from "../pages/Hooks";
 import Error from "../pages/Error";
 import Works from "../pages/Works";
 import Music from "../pages/Music";
+import Todo from "../pages/Todo";
 
 const AppRouter = () => {
     return (
@@ -16,6 +17,7 @@ const AppRouter = () => {
             <Route path={"/hooks"} element={<Hooks/>}/>
             <Route path={"/works"} element={<Works/>}/>
             <Route path={"/music"} element={<Music/>}/>
+            <Route path={"/todo"} element={<Todo/>}/>
             <Route path={"/error"} element={<Error/>}/>
             <Route path={"*"} element={<Navigate to ="/error" />}/>
         </Routes>

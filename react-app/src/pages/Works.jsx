@@ -7,13 +7,16 @@ const Works = () => {
         <div>
             <ListGroup as="ol" numbered>
                 <ListGroup.Item as="li">
-                    <Link to={"/hooks"}>Hooks</Link>
+                    <Link to={"/hooks"}>JS4.10 - Hooks</Link>
                 </ListGroup.Item>
                 <ListGroup.Item as="li">
-                    <Link to={"/music"}>Как музыка может улучшить качество нашей жизни?</Link>
+                    <Link to={"/music"}>JS4.11 - Структура приложения</Link>
                 </ListGroup.Item>
                 <ListGroup.Item as="li">
-                    {/*<Link to={"/hooks"}>Hooks</Link>*/}
+                    {/*<Link to={"/music"}>JS4.12 - Фильтр для магазина</Link>*/}
+                </ListGroup.Item>
+                <ListGroup.Item as="li">
+                    <Link to={"/todo"}>JS4.13 - TodoApplication</Link>
                 </ListGroup.Item>
             </ListGroup>
         </div>

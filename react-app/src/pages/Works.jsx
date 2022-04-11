@@ -13,7 +13,7 @@ const Works = () => {
                     <Link to={"/music"}>JS4.11 - Структура приложения</Link>
                 </ListGroup.Item>
                 <ListGroup.Item as="li">
-                    {/*<Link to={"/music"}>JS4.12 - Фильтр для магазина</Link>*/}
+                    <Link to={"/store-filter"}>JS4.12 - Фильтр для магазина</Link>
                 </ListGroup.Item>
                 <ListGroup.Item as="li">
                     <Link to={"/todo"}>JS4.13 - TodoApplication</Link>

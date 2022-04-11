@@ -3,7 +3,8 @@ import React from 'react';
 const FuncClass = () => {
     return (
         <div>
-            <Comment author={{avatarUrl: require("../static/images/9sH_WJPWW8k.jpg"), name: "Damir"}} text={"Some simple text"} date={(new Date).toLocaleString()}/>
+            <Comment author={{avatarUrl: require("../static/images/9sH_WJPWW8k.jpg"), name: "Damir"}}
+                     text={"Some simple text"} date={(new Date()).toLocaleString()}/>
         </div>
     );
 };
@@ -12,9 +13,6 @@ export default FuncClass;
 
 
 class Comment extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
@@ -22,8 +20,8 @@ class Comment extends React.Component {
                 <div className={"UserInfo"}>
                     <img className={"Avatar"}
                          style={{width: "600px", height: "600px"}}
-                    src={this.props.author.avatarUrl}
-                    alt={this.props.author.name}/>
+                         src={this.props.author.avatarUrl}
+                         alt={this.props.author.name}/>
                     <div className={"User-Info-name"}>
                         {this.props.author.name}
                     </div>
@@ -35,7 +33,7 @@ class Comment extends React.Component {
                     {this.props.date}
                 </div>
             </div>
-            )
+        )
     }
 }
 

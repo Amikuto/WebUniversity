@@ -21,6 +21,9 @@ const Works = () => {
                 <ListGroup.Item as="li">
                     <Link to={"/conditional-render"}>JS4.14 - Условный рендер</Link>
                 </ListGroup.Item>
+                <ListGroup.Item as="li">
+                    <Link to={"/function-class-components"}>JS4.15 - Компоненты, основанные на классах</Link>
+                </ListGroup.Item>
             </ListGroup>
         </div>
     );

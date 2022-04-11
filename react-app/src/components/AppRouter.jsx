@@ -8,6 +8,7 @@ import Works from "../pages/Works";
 import Music from "../pages/Music";
 import Todo from "../pages/Todo";
 import ConditionalRender from "../pages/ConditionalRender";
+import FuncClass from "../pages/FuncClass";
 
 const AppRouter = () => {
     return (
@@ -20,8 +21,9 @@ const AppRouter = () => {
             <Route path={"/music"} element={<Music/>}/>
             <Route path={"/todo"} element={<Todo/>}/>
             <Route path={"/conditional-render"} element={<ConditionalRender/>}/>
+            <Route path={"/function-class-components"} element={<FuncClass/>}/>
             <Route path={"/error"} element={<Error/>}/>
-            <Route path={"*"} element={<Navigate to ="/error" />}/>
+            <Route path={"*"} element={<Navigate to="/error"/>}/>
         </Routes>
     );
 };

@@ -18,6 +18,9 @@ const Works = () => {
                 <ListGroup.Item as="li">
                     <Link to={"/todo"}>JS4.13 - TodoApplication</Link>
                 </ListGroup.Item>
+                <ListGroup.Item as="li">
+                    <Link to={"/conditional-render"}>JS4.14 - Условный рендер</Link>
+                </ListGroup.Item>
             </ListGroup>
         </div>
     );

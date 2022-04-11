@@ -1,7 +1,7 @@
 import React, {useMemo, useState} from 'react';
-import TaskList from "../components/TaskList";
-import TaskForm from "../components/TaskForm";
-import TodoSelect from "../components/UI/select/TodoSelect";
+import TaskList from "../components/Todo/TaskList";
+import TaskForm from "../components/Todo/TaskForm";
+import Select from "../components/UI/select/Select";
 import "../styles/Todo.css"
 
 const Todo = () => {
@@ -122,13 +122,13 @@ const Todo = () => {
                     <TaskForm create={createTask} task_types={task_types}/>
                     <hr style={{margin: "15px 0"}}/>
                     <div>
-                        <TodoSelect
+                        <Select
                             value={selectedTaskType}
                             onChange={e => setSelectedTaskType(e)}
                             defaultValue={"Категории"}
                             options={task_types}
                         />
-                        <TodoSelect
+                        <Select
                             value={selectedSort}
                             onChange={sortTasksByValue}
                             defaultValue={"Сортировка"}

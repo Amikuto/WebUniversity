@@ -1,5 +1,5 @@
 import React from 'react';
-import MyButton from "./UI/button/MyButton";
+import MyButton from "../UI/button/MyButton";
 
 const TaskItem = (props) => {
     const options = {month: 'long', day: 'numeric', hour: '2-digit'};

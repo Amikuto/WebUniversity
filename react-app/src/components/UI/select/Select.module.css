@@ -14,18 +14,18 @@
 /* Select style here */
 
 select {
-    margin: 0 auto;
+    margin: 5px 5px 5px 0;
     color: #000000;
     width: 310px;
-    padding: 15px;
-    height: 25px;
+    padding: 5px;
+    height: 35px;
     cursor: pointer;
 }
 
 select:hover {
     background-color: transparent;
-    color: white;
-    padding: 15px 5px 15px 25px;
+    /*color: white;*/
+    padding: 5px 5px 5px 15px;
 }
 
 select option {

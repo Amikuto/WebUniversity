@@ -2,7 +2,7 @@ import React from "react";
 import {Nav} from "react-bootstrap";
 import "../../../../styles/Dashboard.css"
 import {Container, Row, Col, Card, Form, Button} from "react-bootstrap";
-import TaskItem from "../../../TaskItem";
+import TaskItem from "../../TaskItem";
 
 const LeftSidePanel = () => {
     return (

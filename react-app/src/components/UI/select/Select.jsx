@@ -1,7 +1,7 @@
 import React from 'react';
-import classes from "./TodoSelect.module.css"
+import classes from "./Select.module.css"
 
-const TodoSelect = ({options, defaultValue, value, onChange}) => {
+const Select = ({options, defaultValue, value, onChange}) => {
     return (
         <select
             id={classes}
@@ -18,4 +18,4 @@ const TodoSelect = ({options, defaultValue, value, onChange}) => {
     );
 };
 
-export default TodoSelect;
+export default Select;

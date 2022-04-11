@@ -1,4 +1,9 @@
 .h1 {
-    margin-top: 60px;
+    margin: 20px;
     font-size: 50px;
+}
+
+.regLogin {
+    height: 300px;
+    width: 100%;
 }

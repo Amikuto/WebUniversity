@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import MyButton from "../components/UI/button/MyButton";
-import {Button, Form} from "react-bootstrap";
-import UserRegistrationFrom from "../components/User/UserRegistrationFrom";
 import UserLoginForm from "../components/User/UserLoginForm";
 
 const ConditionalRender = () => {
@@ -12,14 +10,14 @@ const ConditionalRender = () => {
             name: "Damir",
             email: "damir@mail.com",
             username: "ami",
-            password: 123
+            password: "123"
         },
         {
             id: 2,
             name: "Masha",
             email: "masha@mail.com",
             username: "mash",
-            password: 123
+            password: "123"
         },
     ])
 
@@ -35,7 +33,7 @@ const ConditionalRender = () => {
 
     }
 
-    const login = (user) => {
+    const loginF = (user) => {
         if (isUserExist(user)) {
             setIsLoggedIn(true)
         }
@@ -43,9 +41,9 @@ const ConditionalRender = () => {
 
 
     return (
-        <div id={"conditional-page"} style={{textAlign: "center", width: "600px", height: "1200px"}}>
-            <div >
-                The user is <b>{isLoggedIn?'currently':'not'}</b> logged in.
+        <div id={"conditional-page"} style={{textAlign: "center", width: "600px"}}>
+            <div>
+                The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
             </div>
             <div>
                 {isLoggedIn
@@ -59,7 +57,7 @@ const ConditionalRender = () => {
                         <MyButton
                             onClick={() => setIsLoggedIn(true)}>LogIn</MyButton>
                         {/*<UserRegistrationFrom create={addNewUser}/>*/}
-                        <UserLoginForm create={addNewUser} login={login}/>
+                        <UserLoginForm create={addNewUser} loginF={loginF}/>
                     </div>
                 }
             </div>

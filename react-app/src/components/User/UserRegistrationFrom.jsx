@@ -40,7 +40,7 @@ const UserRegistrationFrom = ({create}) => {
                                   onChange={e => setUser({...user, name: e.target.value})}/>
                 </Form.Group>
                 <Button variant="primary" onClick={addNewUser}>
-                    Submit
+                    Зарегестрироваться
                 </Button>
             </Form>
         </div>

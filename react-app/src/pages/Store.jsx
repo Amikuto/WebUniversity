@@ -5,6 +5,9 @@ import shirtRed from '../static/images/t-red.png'
 import shirtBlue from '../static/images/shirt-blue.png'
 import shirtBlack from '../static/images/t-black.png'
 import shirtYellow from '../static/images/t-yellow.png'
+import MyButton from "../components/UI/button/MyButton";
+import Input from "../components/UI/input/Input";
+import Select from "../components/UI/select/Select";
 
 const Store = () => {
     return (
@@ -26,7 +29,7 @@ function ControlledCarousel({goods}) {
     };
 
     return (
-        <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel activeIndex={index} onSelect={handleSelect} style={{maxWidth: "480px"}}>
             {goods.map(n =>
                 <Carousel.Item>
                     <img
@@ -38,7 +41,7 @@ function ControlledCarousel({goods}) {
                     <Carousel.Caption>
                         <h3>Цена</h3>
                         <p>{n.cost}</p>
-                        <button data-art={n.name}>Купить</button>
+                        <MyButton>Купить</MyButton>
                     </Carousel.Caption>
                 </Carousel.Item>)
             }
@@ -55,6 +58,10 @@ const Block = ({ HeaderTag = 'h2', headerText, className = '', children }) => (
 
 const CountryFilter = ({ value, onChange, countries }) => (
     <Block headerText="Country">
+        {/*<Select value={value} onChange={onChange}>*/}
+        {/*    <option value="">-- Country --</option>*/}
+        {/*    {countries.map(n => <option key={n}>{n}</option>)}*/}
+        {/*</Select>*/}
         <select onChange={onChange} value={value}>
             <option value="">-- Country --</option>
             {countries.map(n => <option key={n}>{n}</option>)}
@@ -80,6 +87,12 @@ const SizeFilter = ({ value, onChange, sizes }) => (
 
 const PriceInput = ({ index, ...props }) => (
     <input className="price-input" data-index={index} {...props} />
+    // <Input
+    //     value={props.value.target}
+    //     // onChange={e => props({...task, title: e.target.value})}
+    //     type={"text"}
+    //     placeholder={"Название задачи"}
+    // />
 );
 
 const PriceFilter = ({ value, onChange }) => (
@@ -97,7 +110,7 @@ const GoodsList = ({ goods }) => (
             <Block className="good" HeaderTag="h3" headerText={n.name} key={n.id}>
                 <img src={n.image} />
                 <p>Цена: {n.cost}</p>
-                <button data-art={n.name}>Купить</button>
+                <MyButton>Купить</MyButton>
             </Block>
         ))}
     </div>
